@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pricing component with toggle</title>
+</head>
+<body>
+
+    <main class="main">
+        <div class="wrapper">
+
+            <h1 class="title">Our pricing</h1>
+
+            <section class="switch-plans">
+                <span>Annually</span>
+                <input type="checkbox" name="" id="checkbox-plans" class="checkbox-plans">
+                <label for="checkbox-plans" class="switch"></label>
+                <span>Monthly</span>
+            </section>
+
+
+            <section class="plans">
+
+                <div class="plans-options">
+                
+                    <div class="plans-option">
+                        <div class="plans-option-title">Basic</div>
+                        <div class="plans-option-price" id="price-basic">$199.99</div>
+
+                        <ul class="plans-option-properties">
+                            <li><span>500 GB Storage</span></li>
+                            <li><span>2 Users Allowed</span></li>
+                            <li><span>Send up to 3 GB</span></li>
+                        </ul>
+                        <a href="" class="link-learn-more">Learn more</a>
+                    </div>
+
+                    <div class="plans-option plans-blue plans-center">
+                        <div class="plans-option-title">Professional</div>
+                        <div class="plans-option-price" id="price-professional">$249.99</div>
+                        
+                        <ul class="plans-option-properties">
+                            <li><span>1 TB Storage</span></li>
+                            <li><span>5 users Allowed</span></li>
+                            <li><span>Send up to 10 GB</span></li>
+                        </ul>
+                        <a href="" class="link-learn-more">Learn more</a>
+                    </div>
+
+                    <div class="plans-option">
+                        <div class="plans-option-title">Master</div>
+                        <div class="plans-option-price" id="price-master">$399.99</div>
+                        
+                        <ul class="plans-option-properties">
+                            <li><span>2 TB Storage</span></li>
+                            <li><span>10 Users Allowed</span></li>
+                            <li><span>Send up to 20 GB</span></li>
+                        </ul>
+                        <a href="" class="link-learn-more">Learn more</a>
+                    </div>
+                    
+                </div>
+
+            </section>
+
+
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>

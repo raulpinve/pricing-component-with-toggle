@@ -1,0 +1,224 @@
+
+/* Globals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Colors */
+
+    /* Primary */
+    --gradient : linear-gradient(to right, hsl(236, 72%, 79%) 0%,  hsl(237, 63%, 64%) 100%);
+    --gradientVertical : linear-gradient(to bottom, hsl(236, 72%, 79%) 0%,  hsl(237, 63%, 64%) 100%);
+
+    /* Neutral */
+    --veryLightGrayishBlue: hsl(240, 78%, 98%);
+    --lightGrayishBlue: hsl(234, 14%, 74%);
+    --grayishBlue: hsl(233, 13%, 49%);
+    --darkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main{
+    width: 100%;
+    background-color: var(--veryLightGrayishBlue);
+    padding: 4em 2em;
+    background-image: url("images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-position: top -50px right -190px;
+    background-size: contain;
+    display: flex;
+}
+.wrapper{
+    min-width: 325px;
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+    color: var(--darkGrayishBlue);
+}
+/* Switch plans */
+.switch-plans{
+    margin: auto;
+    width: 240px;
+    margin-top: 2.5em;
+    color: var(--lightGrayishBlue);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    /* grid-gap: .2em; */
+    place-items: center;
+}
+#checkbox-plans{
+    display: none;
+}
+.switch{
+    display: block;
+    width: 55px;
+    height: 32px;
+    background: var(--gradient);
+    border-radius: 20px;
+    padding: 3px;
+    cursor: pointer;
+}
+.switch::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+#checkbox-plans:checked ~ .switch::after{
+    transition: 1s;
+    left: 24px;
+}
+#checkbox-plans:checked ~ .switch {
+    opacity: .7;
+}
+
+/* Plans options */
+.plans-options{
+    margin-top: 5em;
+}
+.plans-option{
+    background: white;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 5px 5px 20px -8px rgba(0, 0 , 0, .25);
+    margin-top: 2em;
+}
+
+.plans-option-title{
+    text-align: center;
+    color: var(--darkGrayishBlue);
+    font-size: 1.2em;
+}
+.plans-option-price{
+    font-size: 4em;
+    text-align: center;
+    margin-top: .2em;
+}
+
+.plans-option-properties{
+    margin-top: 1.5em;
+}
+.plans-option-properties li{
+    list-style: none;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #dcdcdc;
+    color: var(--darkGrayishBlue);
+    font-size: .95em;
+    /* opacity: .7; */
+}
+.plans-option-properties li:last-child{
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.link-learn-more{
+    display: block;
+    padding: 1.2em;
+    text-align: center;
+    margin-top: 2.5em;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--gradient);
+    font-weight: lighter;
+    font-size: .8em;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: 1px solid #a1a6f8;
+}
+.link-learn-more:hover{
+    background: white;
+    color: #a1a6f8;
+    border: 1px solid #a1a6f8;
+}
+
+.plans-blue{
+    background: var(--gradientVertical);
+    color: white;
+}
+
+.plans-blue .plans-option-title{
+    color: white;
+}
+.plans-blue .plans-option-properties li{
+    color: white;
+    border-top: 1px solid #a1a6f8;
+}
+.plans-blue .plans-option-properties li:last-child{
+    border-bottom: 1px solid #a1a6f8;
+}
+.plans-blue .link-learn-more{
+    background: white;
+    color:hsl(237, 63%, 64%);
+}
+.plans-blue .link-learn-more:hover{
+    background: transparent;
+    color: white;
+}
+
+/* Media querys */
+@media screen and (min-width: 1440px){
+
+    /* Main */
+    .wrapper{
+        width: 1110px;
+        margin: auto;
+    }
+    .main{  
+       height: 100vh;
+       background-image: url("images/bg-top.svg") ,  url("images/bg-bottom.svg");
+       background-position: top right,  left bottom;
+       background-size: 363px, auto;
+    }
+
+    /* Plans */
+    .plans-option{
+        width: 350px;
+        height: 455px;
+        padding: 2.5em 1.5em;
+    }
+    .plans-option:first-child{
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .plans-option:last-child{
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    .plans-option-price{
+        margin-top: .4em;
+        font-size: 4.5em;
+    }
+    .plans-options{
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        justify-content: center;
+        margin-top: 2.5em;
+        align-items: center;
+    }
+    .plans-option-properties li{
+        padding: 1.2em;
+    }
+    .plans-center{
+        padding: 3.75em 1.5em;
+        height: 500px;
+    }
+    .link-learn-more{
+        margin-top: 2.8em;
+    }
+
+
+}
